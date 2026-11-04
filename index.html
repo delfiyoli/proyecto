@@ -275,70 +275,99 @@
     <h2>Quiz</h2>
 
     <p>
-        Pon a prueba tus conocimientos sobre San Faustino Míguez.
+        Poné a prueba tus conocimientos sobre San Faustino Míguez.
     </p>
 
-    <h3>1. ¿Dónde nació San Faustino Míguez?</h3>
+    <form id="formularioQuiz">
 
-    <ul>
-        <li>
-            <input type="radio" name="pregunta1">
-            Xamirás
-        </li>
+        <h3>1. ¿Dónde nació San Faustino Míguez?</h3>
 
-        <li>
-            <input type="radio" name="pregunta1">
-            Madrid
-        </li>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="pregunta1" value="xamiras">
+                    Xamirás
+                </label>
+            </li>
 
-        <li>
-            <input type="radio" name="pregunta1">
-            Getafe
-        </li>
-    </ul>
+            <li>
+                <label>
+                    <input type="radio" name="pregunta1" value="madrid">
+                    Madrid
+                </label>
+            </li>
 
+            <li>
+                <label>
+                    <input type="radio" name="pregunta1" value="getafe">
+                    Getafe
+                </label>
+            </li>
+        </ul>
 
-    <h3>2. ¿A qué congregación religiosa perteneció?</h3>
+        <p id="explicacion1" class="explicacion"></p>
 
-    <ul>
-        <li>
-            <input type="radio" name="pregunta2">
-            Escuelas Pías
-        </li>
+        <h3>2. ¿A qué congregación religiosa perteneció?</h3>
 
-        <li>
-            <input type="radio" name="pregunta2">
-            Jesuitas
-        </li>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="pregunta2" value="escuelas">
+                    Escuelas Pías
+                </label>
+            </li>
 
-        <li>
-            <input type="radio" name="pregunta2">
-            Franciscanos
-        </li>
-    </ul>
+            <li>
+                <label>
+                    <input type="radio" name="pregunta2" value="jesuitas">
+                    Jesuitas
+                </label>
+            </li>
 
+            <li>
+                <label>
+                    <input type="radio" name="pregunta2" value="franciscanos">
+                    Franciscanos
+                </label>
+            </li>
+        </ul>
 
-    <h3>3. ¿Qué congregación fundó?</h3>
+        <p id="explicacion2" class="explicacion"></p>
 
-    <ul>
-        <li>
-            <input type="radio" name="pregunta3">
-            Hijas de la Divina Pastora
-        </li>
+        <h3>3. ¿Qué congregación fundó?</h3>
 
-        <li>
-            <input type="radio" name="pregunta3">
-            Hermanas de la Caridad
-        </li>
+        <ul>
+            <li>
+                <label>
+                    <input type="radio" name="pregunta3" value="divina">
+                    Hijas de la Divina Pastora
+                </label>
+            </li>
 
-        <li>
-            <input type="radio" name="pregunta3">
-            Hijas de María
-        </li>
-    </ul>
+            <li>
+                <label>
+                    <input type="radio" name="pregunta3" value="caridad">
+                    Hermanas de la Caridad
+                </label>
+            </li>
 
-    <button type="button">Enviar respuestas</button>
+            <li>
+                <label>
+                    <input type="radio" name="pregunta3" value="maria">
+                    Hijas de María
+                </label>
+            </li>
+        </ul>
+
+        <p id="explicacion3" class="explicacion"></p>
+
+        <button type="submit">Enviar respuestas</button>
+
+        <p id="resultado" aria-live="polite"></p>
+
+    </form>
 </section>
+
 <section id="fuentes">
 
     <h2>Fuentes consultadas</h2>
@@ -356,5 +385,6 @@
     <p>Proyecto Web: Rostros de la Santidad Escolapia</p>
     <p>3.º C - Informática</p>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

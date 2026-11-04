@@ -268,3 +268,46 @@ footer {
 footer p {
     margin: 0.2rem 0;
 }
+
+/* RESPUESTAS DEL QUIZ */
+
+#quiz li.respuesta-correcta {
+    background-color: #e2f3e5;
+    border: 1px solid #8bc69a;
+    color: #216b35;
+}
+
+#quiz li.respuesta-incorrecta {
+    background-color: #fce8e8;
+    border: 1px solid #e5a0a0;
+    color: #922d2d;
+}
+
+#quiz li.respuesta-correcta input {
+    accent-color: #23763b;
+}
+
+#quiz li.respuesta-incorrecta input {
+    accent-color: #b52d2d;
+}
+/* EXPLICACIONES DEL QUIZ */
+
+#quiz .explicacion {
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0 1.5rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+#quiz .explicacion.correcta {
+    background-color: #e2f3e5;
+    border-left: 4px solid #23763b;
+    color: #216b35;
+}
+
+#quiz .explicacion.incorrecta {
+    background-color: #fff4d6;
+    border-left: 4px solid #d99b26;
+    color: #805c13;
+}
