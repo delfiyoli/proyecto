@@ -272,101 +272,72 @@
 </section>
 
 <section id="quiz">
-    <h2>Quiz</h2>
-
-    <p>
-        Poné a prueba tus conocimientos sobre San Faustino Míguez.
-    </p>
-
-    <form id="formularioQuiz">
-
-        <h3>1. ¿Dónde nació San Faustino Míguez?</h3>
-
-        <ul>
-            <li>
-                <label>
-                    <input type="radio" name="pregunta1" value="xamiras">
-                    Xamirás
-                </label>
-            </li>
-
-            <li>
-                <label>
-                    <input type="radio" name="pregunta1" value="madrid">
-                    Madrid
-                </label>
-            </li>
-
-            <li>
-                <label>
-                    <input type="radio" name="pregunta1" value="getafe">
-                    Getafe
-                </label>
-            </li>
-        </ul>
-
-        <p id="explicacion1" class="explicacion"></p>
-
-        <h3>2. ¿A qué congregación religiosa perteneció?</h3>
-
-        <ul>
-            <li>
-                <label>
-                    <input type="radio" name="pregunta2" value="escuelas">
-                    Escuelas Pías
-                </label>
-            </li>
-
-            <li>
-                <label>
-                    <input type="radio" name="pregunta2" value="jesuitas">
-                    Jesuitas
-                </label>
-            </li>
-
-            <li>
-                <label>
-                    <input type="radio" name="pregunta2" value="franciscanos">
-                    Franciscanos
-                </label>
-            </li>
-        </ul>
-
-        <p id="explicacion2" class="explicacion"></p>
-
-        <h3>3. ¿Qué congregación fundó?</h3>
-
-        <ul>
-            <li>
-                <label>
-                    <input type="radio" name="pregunta3" value="divina">
-                    Hijas de la Divina Pastora
-                </label>
-            </li>
-
-            <li>
-                <label>
-                    <input type="radio" name="pregunta3" value="caridad">
-                    Hermanas de la Caridad
-                </label>
-            </li>
-
-            <li>
-                <label>
-                    <input type="radio" name="pregunta3" value="maria">
-                    Hijas de María
-                </label>
-            </li>
-        </ul>
-
-        <p id="explicacion3" class="explicacion"></p>
-
-        <button type="submit">Enviar respuestas</button>
-
-        <p id="resultado" aria-live="polite"></p>
-
-    </form>
-</section>
+    <h2>Quiz: ¿Cuánto sabés sobre San Faustino Míguez?</h2>
+    
+    <p>Respondé las siguientes preguntas para comprobar cuánto aprendiste sobre su vida y su obra.</p>
+    
+    <h3>1. ¿Dónde nació San Faustino Míguez?</h3>
+    
+    <ul>
+    <li>
+    <input type="radio" name="pregunta1" id="p1a">
+    <label for="p1a">Xamirás, España</label>
+    </li>
+    <li>
+    <input type="radio" name="pregunta1" id="p1b">
+    <label for="p1b">Madrid, España</label>
+    </li>
+    <li>
+    <input type="radio" name="pregunta1" id="p1c">
+    <label for="p1c">Roma, Italia</label>
+    </li>
+    </ul>
+    
+    <p id="explicacion1" class="explicacion"></p>
+    
+    <h3>2. ¿A qué congregación religiosa perteneció?</h3>
+    
+    <ul>
+    <li>
+    <input type="radio" name="pregunta2" id="p2a">
+    <label for="p2a">Escuelas Pías</label>
+    </li>
+    <li>
+    <input type="radio" name="pregunta2" id="p2b">
+    <label for="p2b">Jesuitas</label>
+    </li>
+    <li>
+    <input type="radio" name="pregunta2" id="p2c">
+    <label for="p2c">Salesianos</label>
+    </li>
+    </ul>
+    
+    <p id="explicacion2" class="explicacion"></p>
+    
+    <h3>3. ¿Qué congregación fundó?</h3>
+    
+    <ul>
+    <li>
+    <input type="radio" name="pregunta3" id="p3a">
+    <label for="p3a">Hijas de la Divina Pastora</label>
+    </li>
+    <li>
+    <input type="radio" name="pregunta3" id="p3b">
+    <label for="p3b">Hijas de María</label>
+    </li>
+    <li>
+    <input type="radio" name="pregunta3" id="p3c">
+    <label for="p3c">Hermanas Escolapias</label>
+    </li>
+    </ul>
+    
+    <p id="explicacion3" class="explicacion"></p>
+    
+    <button type="button" id="enviar">Enviar respuestas</button>
+    
+    <p id="resultado"></p>
+    </section>
+    
 
 <section id="fuentes">
 
