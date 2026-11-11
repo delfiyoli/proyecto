@@ -4,77 +4,80 @@ const boton = document.getElementById("enviar");
 
 boton.addEventListener("click", function() {
 
-let puntaje = 0;
+    let puntaje = 0;
+    let todasRespondidas = true;
 
-// Obtener las opciones seleccionadas
-const p1a = document.getElementById("p1a");
-const p1b = document.getElementById("p1b");
-const p1c = document.getElementById("p1c");
+    
+    for (let i = 1; i <= 3; i++) {
 
-const p2a = document.getElementById("p2a");
-const p2b = document.getElementById("p2b");
-const p2c = document.getElementById("p2c");
+        const opcionA = document.getElementById("p" + i + "a");
+        const opcionB = document.getElementById("p" + i + "b");
+        const opcionC = document.getElementById("p" + i + "c");
 
-const p3a = document.getElementById("p3a");
-const p3b = document.getElementById("p3b");
-const p3c = document.getElementById("p3c");
+        document.getElementById("explicacion" + i).textContent = "";
 
-// Comprobar que todas las preguntas estén respondidas
-if (
-(!p1a.checked && !p1b.checked && !p1c.checked) ||
-(!p2a.checked && !p2b.checked && !p2c.checked) ||
-(!p3a.checked && !p3b.checked && !p3c.checked)
-) {
-resultado.textContent = "Debes responder todas las preguntas.";
+        if (!opcionA.checked && !opcionB.checked && !opcionC.checked) {
+            todasRespondidas = false;
+        }
+    }
 
-} else {
+    
+    if (todasRespondidas === false) {
 
-// Primera pregunta
-if (p1a.checked) {
-puntaje++;
-document.getElementById("explicacion1").textContent =
-"Correcto. San Faustino Míguez nació en Xamirás, España.";
-} else {
-document.getElementById("explicacion1").textContent =
-"Incorrecto. Nació en Xamirás, España.";
-}
+        resultado.textContent = "Debes responder todas las preguntas.";
 
-// Segunda pregunta
-if (p2a.checked) {
-puntaje++;
-document.getElementById("explicacion2").textContent =
-"Correcto. Perteneció a las Escuelas Pías.";
-} else {
-document.getElementById("explicacion2").textContent =
-"Incorrecto. Perteneció a las Escuelas Pías.";
-}
+    } else {
 
-// Tercera pregunta
-if (p3a.checked) {
-puntaje++;
-document.getElementById("explicacion3").textContent =
-"Correcto. Fundó las Hijas de la Divina Pastora.";
-} else {
-document.getElementById("explicacion3").textContent =
-"Incorrecto. Fundó las Hijas de la Divina Pastora.";
-}
+        
+        if (document.getElementById("p1a").checked) {
+            puntaje++;
+            document.getElementById("explicacion1").textContent =
+                "Correcto. San Faustino Míguez nació en Xamirás, España.";
+        } else {
+            document.getElementById("explicacion1").textContent =
+                "Incorrecto. Nació en Xamirás, España.";
+        }
 
-// Mostrar el puntaje
-if (puntaje === 3) {
-resultado.textContent =
-"¡Excelente! Respondiste correctamente las 3 preguntas.";
+        
+        if (document.getElementById("p2a").checked) {
+            puntaje++;
+            document.getElementById("explicacion2").textContent =
+                "Correcto. Perteneció a las Escuelas Pías.";
+        } else {
+            document.getElementById("explicacion2").textContent =
+                "Incorrecto. Perteneció a las Escuelas Pías.";
+        }
 
-} else if (puntaje === 2) {
-resultado.textContent =
-"Muy bien. Respondiste correctamente 2 de 3.";
+       
+        if (document.getElementById("p3a").checked) {
+            puntaje++;
+            document.getElementById("explicacion3").textContent =
+                "Correcto. Fundó las Hijas de la Divina Pastora.";
+        } else {
+            document.getElementById("explicacion3").textContent =
+                "Incorrecto. Fundó las Hijas de la Divina Pastora.";
+        }
 
-} else if (puntaje === 1) {
-resultado.textContent =
-"Respondiste correctamente 1 de 3. Seguí repasando.";
+     
+        if (puntaje === 3) {
+            resultado.textContent =
+                "¡Excelente! Respondiste correctamente las 3 preguntas.";
 
-} else {
-resultado.textContent =
-"No acertaste ninguna respuesta. Podés repasar la información.";
+        } else if (puntaje === 2) {
+            resultado.textContent =
+                "Muy bien. Respondiste correctamente 2 de 3.";
+
+        } else if (puntaje === 1) {
+            resultado.textContent =
+                "Respondiste correctamente 1 de 3. Seguí repasando.";
+
+        } else {
+            resultado.textContent =
+                "No acertaste ninguna respuesta. Podés repasar la información.";
+        }
+    }
+});
+
 }
 }
 });
