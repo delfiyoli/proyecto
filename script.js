@@ -78,6 +78,3 @@ boton.addEventListener("click", function() {
     }
 });
 
-}
-}
-});
