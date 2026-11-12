@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trivia de San Faustino Miguez de la Encarnación</h1>
+<h2>1. ¿Dónde nació?</h2>
+<input type="radio" name="p1" value="a">Xamirás <br>
+<input type="radio" name="p1" value="b">Valencia <br>
+<input type="radio" name="p1" value="c">Sevilla <br>
+<h2>2.¿En qué año ingresó en el Noviciado de las Escuelas Pías de Madrid?</h2>
+<input type="radio" name="p2" value="a">1850 <br>
+<input type="radio" name="p2" value="b"> 1860<br>
+<input type="radio" name="p2" value="c">1854 <br>
+<h2>3. ¿Dónde descubrió su vocación escolapia?</h2>
+<input type="radio" name="p3" value="a"> Zaragoza<br>
+<input type="radio" name="p3" value="b"> Málaga<br>
+<input type="radio" name="p3" value="c"> Celanova<br>
+<h2>4. ¿En qué año fue ordenado sacerdote?</h2>
+<input type="radio" name="p4" value="a"> 1849<br>
+<input type="radio" name="p4" value="b"> 1856<br>
+<input type="radio" name="p4" value="c"> 1853<br>
+<h2>5. ¿En qué año falleció?</h2>
+<input type="radio" name="p5" value="a"> 1915<br>
+<input type="radio" name="p5" value="b"> 1932<br>
+<input type="radio" name="p5" value="c"> 1925<br>
+<br>
+<button id="comprobar" type="button">Comprobar</button>
+<button id="reiniciar" type="button">Reiniciar</button>
+<p id="resultado"></p>
+<script>
+document.getElementById("comprobar").addEventListener("click", function() {
+let puntaje = 0;
+let p1 = document.querySelector('input[name="p1"]:checked');
+let p2 = document.querySelector('input[name="p2"]:checked');
+let p3 = document.querySelector('input[name="p3"]:checked');
+let p4 = document.querySelector('input[name="p4"]:checked');
+let p5 = document.querySelector('input[name="p5"]:checked');
+if (!p1 || !p2 || !p3 || !p4 || !p5) {
+document.getElementById("resultado").innerHTML =
+"Debes responder las tres preguntas.";
+return;
+}
+// Respuestas correctas
+if (p1.value === "a") puntaje++;
+if (p2.value === "a") puntaje++;
+if (p3.value === "c") puntaje++;
+if (p4.value === "b") puntaje++;
+if (p5.value === "c") puntaje++;
+let mensaje = "<h3>Resultado: " + puntaje + "/5 puntos</h3>";
+if (puntaje === 5) {
+mensaje += "¡Felicitaciones! Has respondido correctamente todas las preguntas.";
+} else if (puntaje === 4) {
+mensaje += "Buen intento. Solo te equivocaste en una pregunta.";
+} else {
+mensaje += "Te invito a intentarlo nuevamente.";
+}
+document.getElementById("resultado").innerHTML = mensaje;
+});
+document.getElementById("reiniciar").addEventListener("click", function() {
+let opciones = document.querySelectorAll('input[type="radio"]');
+for (let opcion of opciones) {
+opcion.checked = false;
+}
+document.getElementById("resultado").innerHTML = "";
+});
+</script>
+</body>
+</html>
